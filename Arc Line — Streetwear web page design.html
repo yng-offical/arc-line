@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/arc%20line.html#clothes -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Line — Streetwear</title>
+<style>
+  /* Reset & base */
+  :root{
+    --bg:#0b0b0b; --card:#111; --accent1:#ff004c; --accent2:#ff9a00; --muted:#cfcfcf;
+    --glass: rgba(255,255,255,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#070707);color:#fff;font-family:Inter,Arial,Helvetica,sans-serif}
+  a{color:inherit}
+
+  /* Header */
+  header.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:linear-gradient(90deg,var(--accent1),var(--accent2));}
+  .brand{display:flex;align-items:center;gap:16px}
+  .brand img{width:72px;height:72px;object-fit:contain;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+  .brand h1{font-size:20px;letter-spacing:2px;margin:0}
+  nav.primary{display:flex;gap:14px;align-items:center}
+  nav.primary a{color:#fff;text-decoration:none;font-weight:700;padding:8px 12px;border-radius:8px}
+  nav.primary a.active{background:rgba(0,0,0,0.12)}
+
+  /* Mobile nav */
+  .burger{display:none;background:transparent;border:0;color:#fff;font-size:22px}
+
+  /* Hero */
+  .hero{padding:48px 24px;text-align:center}
+  .hero h2{font-size:36px;margin:10px 0;color:var(--accent2);text-transform:uppercase}
+  .hero p{max-width:900px;margin:10px auto;color:var(--muted)}
+  .cta{margin-top:18px}
+  .btn{display:inline-block;padding:12px 20px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;text-decoration:none;font-weight:700;box-shadow:0 8px 24px rgba(255,154,0,0.12);}
+
+  /* Main layout */
+  .container{max-width:1200px;margin:28px auto;padding:0 18px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{background:var(--card);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.04);overflow:hidden;transform:translateY(0);transition:transform .28s ease,box-shadow .28s ease}
+  .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.6)}
+  .card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+  .meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+  .meta .title{font-weight:700;color:var(--accent2)}
+  .meta .price{color:var(--accent1);font-weight:800}
+  .small{font-size:13px;color:var(--muted)}
+
+  /* Designers section */
+  .designers{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  .designer{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+  .designer h3{margin:0 0 8px 0;color:var(--accent2)}
+
+  /* Lookbook gallery */
+  .lookbook{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .lookbook img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+
+  /* Contact */
+  .contact{background:var(--glass);padding:18px;border-radius:12px;margin-top:18px}
+  label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+  input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#060606;color:#fff}
+  textarea{min-height:120px}
+  .submit{margin-top:12px}
+
+  /* Footer */
+  footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
+
+  /* Responsive */
+  @media (max-width:1000px){.grid-4{grid-template-columns:repeat(2,1fr)}.designers{grid-template-columns:1fr}.lookbook{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){.grid-4{grid-template-columns:1fr}.brand h1{font-size:16px}.burger{display:block}.nav-desktop{display:none}}
+
+  /* Small animations */
+  .fade-in{opacity:0;transform:translateY(6px);animation:fadeIn .6s forwards}
+  @keyframes fadeIn{to{opacity:1;transform:none}}
+
+  /* Utility */
+  .muted{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <img src="./Arc Line — Streetwear web page design_files/logo.jpg" alt="Arc Line logo">
+    <div>
+      <h1>ARC LINE</h1>
+      <div class="small">Streetwear • Mpumalanga • Est. 2025</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/arc%20line.html#home" onclick="showPage(&#39;home&#39;)">Home</a> |
+    <a href="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/arc%20line.html#clothes" onclick="showPage(&#39;clothes&#39;)">Clothes</a> |
+    <a href="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/arc%20line.html#designers" onclick="showPage(&#39;designers&#39;)">Designers</a> |
+    <a href="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/arc%20line.html#checkout" onclick="showPage(&#39;checkout-page&#39;)">Checkout</a> |
+    <a href="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/arc%20line.html#admin" onclick="showPage(&#39;admin-dashboard&#39;)">Admin</a>
+</nav>
+  <button class="burger" aria-label="menu" onclick="toggleMenu()">☰</button>
+</header>
+
+<main id="app">
+  <section id="home" class="hero fade-in" style="display: none; animation-delay: 0s;">
+    <h2>Arc Line — Proudly South African Streetwear</h2>
+    <p>Bold silhouettes, graffiti-inspired graphics, and oversized comfort. Arc Line blends township rhythms and hip-hop attitude into wearable art.
+    </p>
+    <div class="cta">
+      <a class="btn" href="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/arc%20line.html#clothes" data-route="">Shop the Drop</a>
+    </div>
+  </section>
+
+  <section id="clothes" class="container fade-in" style="margin-top: 10px; display: block; animation-delay: 0.06s;">
+    <h2 style="color:var(--accent2)">New Drop — Essentials</h2>
+    
+
+    <div class="grid-4">
+      <div class="card fade-in" style="animation-delay: 0.12s;">
+        <img src="./Arc Line — Streetwear web page design_files/clothes1.png" alt="ARC Signature Tee">
+        <div class="meta"><div class="title">ARC Signature Tee</div><div class="price">R350</div></div>
+        <div class="small">Oversized cotton, graffiti logo</div>
+      </div>
+
+      <div class="card fade-in" style="animation-delay: 0.18s;">
+        <img src="./Arc Line — Streetwear web page design_files/clothes2.png" alt="Graffiti Hoodie">
+        <div class="meta"><div class="title">Graffiti Hoodie</div><div class="price">R650</div></div>
+        <div class="small">Fleece lined, printed back artwork</div>
+      </div>
+
+      <div class="card fade-in" style="animation-delay: 0.24s;">
+        <img src="./Arc Line — Streetwear web page design_files/clothes3.png" alt="Urban Cargo Pants">
+        <div class="meta"><div class="title">Urban Cargo Pants</div><div class="price">R520</div></div>
+        <div class="small">Relaxed fit with utility pockets</div>
+      </div>
+
+      <div class="card fade-in" style="animation-delay: 0.3s;">
+        <img src="./Arc Line — Streetwear web page design_files/clothes4.png" alt="Street Beanie">
+        <div class="meta"><div class="title">Winter Street Beanie</div><div class="price">R180</div></div>
+        <div class="small">Knitted with embroidered logo</div>
+      </div>
+
+      <div class="card fade-in" style="animation-delay: 0.36s;">
+        <img src="./Arc Line — Streetwear web page design_files/clothes5.png" alt="ARC Snapback">
+        <div class="meta"><div class="title">ARC Snapback</div><div class="price">R220</div></div>
+        <div class="small">Adjustable snapback, bold arc embroidery</div>
+      </div>
+
+      <div class="card fade-in" style="animation-delay: 0.42s;">
+        <img src="./Arc Line — Streetwear web page design_files/clothes6.png" alt="Bomber Jacket">
+        <div class="meta"><div class="title">Heatwave Bomber Jacket</div><div class="price">R899</div></div>
+        <div class="small">Lightweight, reflective piping</div>
+      </div>
+
+      <div class="card fade-in" style="animation-delay: 0.48s;">
+        <img src="./Arc Line — Streetwear web page design_files/clothes7.png" alt="StreetFlex Shorts">
+        <div class="meta"><div class="title">StreetFlex Shorts</div><div class="price">R300</div></div>
+        <div class="small">Stretch fabric, breathable panels</div>
+      </div>
+
+      <div class="card fade-in" style="animation-delay: 0.54s;">
+        <img src="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/clothes8.png" alt="Neon Drift Sweater">
+        <div class="meta"><div class="title">Neon Drift Sweater</div><div class="price">R480</div></div>
+        <div class="small">Retro neon print, relaxed fit</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="designers" class="container fade-in" style="display: none; animation-delay: 0.6s;">
+    <h2 style="color:var(--accent2)">Designers</h2>
+    <div class="designers">
+      <div class="designer">
+        <h3>YNG_Official — Langa</h3>
+        <p class="small">Role: Lead Visual Designer &amp; Urban Concept Artist</p>
+        <p>Langa creates the visual language of Arc Line: character silhouettes, graffiti motifs, and the signature dancing figure that appears across our drops. He mixes local textures and township art references with bold typographic systems.</p>
+      </div>
+
+      <div class="designer">
+        <h3>LMN_MusiQ — Luvo</h3>
+        <p class="small">Role: Style Architect &amp; Musical Brand Director</p>
+        <p>Luvo brings sonic energy to the label — curating colour stories, movement, and campaign rhythm. He ensures every garment tells a story and resonates on stage and on the streets.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;" class="small">Brand Identity: Youth Revolution • Creativity • Movement</div>
+  </section>
+  <section id="lookbook" class="container fade-in" style="display: none; animation-delay: 0.66s;">
+    <h2 style="color:var(--accent2)">Lookbook</h2>
+    <p class="small">A quick visual collection. Replace placeholders with full-size lookbook images named look1.jpg — look6.jpg.</p>
+    <div class="lookbook" style="margin-top:8px">
+      <img src="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/look1.jpg" alt="Look 1">
+      <img src="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/look2.jpg" alt="Look 2">
+      <img src="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/look3.jpg" alt="Look 3">
+      <img src="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/look4.jpg" alt="Look 4">
+      <img src="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/look5.jpg" alt="Look 5">
+      <img src="file:///C:/Users/Siyanda%20Magoda/Desktop/arc%20line/look6.jpg" alt="Look 6">
+    </div>
+  </section>
+
+  <section id="about" class="container fade-in" style="display: none; animation-delay: 0.72s;">
+    <h2 style="color:var(--accent2)">About Arc Line</h2>
+    <p class="small">Founded in 2025 in South Africa, Arc Line bridges street culture and performance art. Our collections are limited drops — designed by YNG_Official and LMN_MusiQ — and produced with a focus on ethics, quality, and community collaboration.</p>
+  </section>
+  <section id="contact" class="container fade-in" style="display: none; animation-delay: 0.78s;">
+    <h2 style="color:var(--accent2)">Contact</h2>
+    <div class="contact">
+      <form onsubmit="event.preventDefault(); alert(&#39;Message sent (demo). Replace this handler with your backend.).&#39;);">
+        <label for="name">Full name</label>
+        <input id="name" placeholder="Your name" required="">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@email.com" required="">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Hi Arc Line..." required=""></textarea>
+        <div class="submit"><button class="btn" type="submit">Send Message</button></div>
+      </form>
+      <div style="margin-top:12px" class="small">Or email us: <a href="mailto:hello@arcline.co.za">hello@arcline.co.za</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year">2025</span> Arc Line — All rights reserved • Proudly South African
+</footer>
+
+<script>
+  // Simple router for this single-file site
+  function goToHash() {
+    const hash = location.hash || '#home';
+    document.querySelectorAll('nav.primary a').forEach(a=>a.classList.toggle('active', a.getAttribute('href')===hash));
+    document.querySelectorAll('main > section').forEach(s=>s.style.display = ('#'+s.id)===hash ? 'block' : 'none');
+  }
+  window.addEventListener('hashchange', goToHash);
+  goToHash();
+
+  // show year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile burger
+  function toggleMenu(){
+    const nav = document.querySelector('nav.primary');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  }
+  window.toggleMenu = toggleMenu;
+
+  // add small staggered animations once visible
+  document.querySelectorAll('.fade-in').forEach((el,i)=>{el.style.animationDelay = (i*0.06)+'s'});
+</script>
+    <script>
+        // Simple Cart System
+        const cart = [];
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            alert(name + " added to cart");
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cart-items');
+            const totalDisplay = document.getElementById('cart-total');
+            if (!cartList || !totalDisplay) return;
+
+            cartList.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - R${item.price}`;
+                cartList.appendChild(li);
+            });
+
+            totalDisplay.textContent = 'Total: R' + total;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Your cart is empty.");
+                return;
+            }
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            const message = encodeURIComponent(`Hi, I want to place an order. Total: R${total}`);
+            window.location.href = `https://wa.me/0000000000?text=${message}`;
+        }
+    </script>
+    <!-- Sliding Cart Sidebar -->
+    <div id="cart-sidebar" style="position: fixed; right: -350px; top: 0; width: 350px; height: 100%; background: #111; color: white; padding: 20px; transition: 0.4s; overflow-y: auto; z-index: 9999;">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: R0</p>
+        <button onclick="checkout()" style="padding: 10px 20px; background:#ff4c00; color:white; border:none; border-radius:8px;">Checkout</button>
+        <button onclick="toggleCart()" style="padding: 10px 20px; background:#333; color:white; border:none; border-radius:8px; margin-top:10px;">Close</button>
+    </div>
+
+    <script>
+        function toggleCart() {
+            const sidebar = document.getElementById('cart-sidebar');
+            sidebar.style.right = sidebar.style.right === '0px' ? '-350px' : '0px';
+        }
+    </script>
+
+    <!-- Checkout Page Placeholder -->
+    <section id="checkout-page" style="display: none; padding: 40px;">
+        <h1>Checkout</h1>
+        <form>
+            <label>Full Name</label>
+            <input type="text" style="width:100%; padding:12px; margin-bottom:10px;">
+            <label>Address</label>
+            <input type="text" style="width:100%; padding:12px; margin-bottom:10px;">
+            <label>Email</label>
+            <input type="email" style="width:100%; padding:12px; margin-bottom:10px;">
+            <label>Phone Number</label>
+            <input type="text" style="width:100%; padding:12px; margin-bottom:10px;">
+            <button type="button" onclick="processPayment()" style="padding:15px 25px; background:#ff004c; border:none; border-radius:8px; color:white;">Proceed to Payment</button>
+        </form>
+    </section>
+
+    <script>
+        function processPayment() {
+            alert('Redirecting to secure payment gateway...');
+            // Insert real payment gateway integration here
+        }
+    </script>
+    <section id="admin-dashboard" style="display: none; padding: 40px; background: rgb(26, 26, 26); color: white;">
+        <h1>Admin Dashboard</h1>
+        <p>Order List (mock data):</p>
+        <ul>
+            <li>Order #001 - R550 - Pending</li>
+            <li>Order #002 - R320 - Paid</li>
+            <li>Order #003 - R1200 - Shipped</li>
+        </ul>
+        <p>More admin tools can be added here.</p>
+    </section>
+
+    <script>
+        const pages = ['home','clothes','designers','checkout-page','admin-dashboard'];
+        function showPage(page){
+            pages.forEach(p=>{
+                const el=document.getElementById(p);
+                if(el) el.style.display = (p===page? 'block':'none');
+            });
+            if(page==='checkout-page') toggleCart(true);
+        }
+
+        // Enable forced open/close
+        function toggleCart(forceClose=false){
+            const sidebar=document.getElementById('cart-sidebar');
+            if(forceClose){ sidebar.style.right='-350px'; return; }
+            sidebar.style.right = sidebar.style.right==='0px' ? '-350px':'0px';
+        }
+
+        // Payment Processor Simulation
+        function processPayment(){
+            alert('Connecting to PayFast / Yoco / Paystack...');
+            // Placeholder redirect
+            window.location.href='https://www.payfast.co.za';
+        }
+
+        // PDF Order Receipt
+        function generatePDF(){
+            const total = cart.reduce((s,i)=>s+i.price,0);
+            const receipt = `Arc Line Order Receipt
+---------------------
+Items: ${cart.length}
+Total: R${total}`;
+            const blob=new Blob([receipt],{type:'text/plain'});
+            const url=URL.createObjectURL(blob);
+            const a=document.createElement('a');
+            a.href=url; a.download='order_receipt.txt'; a.click();
+        }
+    </script>
+
+
+
+</body></html>
